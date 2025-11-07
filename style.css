@@ -1,16 +1,14 @@
-/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIÁVEIS DE CORES (Opcional, mas ajuda muito na organização!) */
 :root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #343a40; /* Cinza escuro para texto */
-    --background-dark: #212529; /* Fundo principal escuro */
-    --background-light: #f8f9fa; /* Fundo de seção clara */
+    --primary-color: #007bff; 
+    --secondary-color: #343a40; 
+    --background-dark: #212529; 
+    --background-light: #f8f9fa; 
     --text-light: #f8f9fa;
     --text-dark: #212529;
 }
@@ -20,10 +18,9 @@ body {
     line-height: 1.6;
     background-color: var(--background-dark);
     color: var(--text-light);
-    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links */
+    scroll-behavior: smooth;
 }
 
-/* ESTILO DO CABEÇALHO/NAVEGAÇÃO */
 .header {
     background-color: var(--secondary-color);
     color: var(--text-light);
@@ -126,12 +123,39 @@ h3 {
 }
 
 .skills-list li {
-    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
     color: var(--text-light);
     padding: 0.7rem 1.5rem;
     border-radius: 20px;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skills-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#js {
+        background-color: #F7DF1E;
+        color: #323330;
+}
+#nodejs{
+        background-color: #339933;
+        color: #FFFFFF;
+}
+#html {
+        background-color: #E34F26;
+        color: #FFFFFF;
+}
+#css {
+        background-color: #1572B6;
+        color: #FFFFFF;
+}
+#mysql {
+        background-color: #00758F;
+        color: #FFFFFF;
 }
 
 .projects {
@@ -183,9 +207,53 @@ h3 {
     text-align: center;
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
 .contact-info p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    margin: 0.25rem 0;
+    color: var(--text-light);
+}
+
+.contact-info a {
+    text-decoration: none; 
+    color: var(--primary-color);
+    background: transparent;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, color 0.2s, transform 0.15s;
+    font-weight: 600;
+}
+
+#github {
+    background-color: #333;
+    color: #fff;
+}
+#linkedin {
+    background-color: #0077B5;
+    color: #fff;
+}
+#instagram {
+    background-color: #E1306C;
+    color: #fff;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    text-decoration: none;
+    background-color: rgba(0, 123, 255, 0.12);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .footer {
